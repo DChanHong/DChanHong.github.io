@@ -1,0 +1,16 @@
+{
+  "name": "hong-development-journal",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "ELEVENTY_ENV=development eleventy --serve --port=8088",
+    "build": "node scripts/clean.mjs && eleventy",
+    "check": "npm run build && node scripts/check-build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8"
+  }
+}

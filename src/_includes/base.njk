@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+<meta name="description" content="{{ description or site.description }}">
+{% if draft %}<meta name="robots" content="noindex,nofollow">{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ title or site.name }}"><meta property="og:description" content="{{ description or site.description }}"><meta property="og:type" content="{% if category %}article{% else %}website{% endif %}"><meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<link rel="stylesheet" href="/assets/style.css">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('hong-theme') || 'light'}catch{}</script>
+<script src="/assets/site.js" defer></script>
+</head>
+<body id="hong-journal">
+<a class="skip" href="#main-content">본문으로 바로가기</a>
+<header><div class="wrap nav"><a class="brand" href="/">성찬홍 <small>개발 기록</small></a><nav aria-label="주 메뉴"><a href="/#journal-writing">기술 글</a><a href="/#journal-projects">프로젝트</a><a href="{{ site.portfolio }}">포트폴리오</a></nav><button type="button" class="mode" aria-label="다크 모드로 전환" aria-pressed="false"><span aria-hidden="true">◐</span></button></div></header>
+<main id="main-content">{{ content | safe }}</main>
+<div class="wrap"><footer><span>© 2026 성찬홍 · 개발 기록</span><a href="{{ site.github }}">GitHub</a></footer></div>
+</body></html>

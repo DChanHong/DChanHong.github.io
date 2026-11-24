@@ -1,0 +1,10 @@
+---
+layout: base.njk
+---
+<article class="post-layout">
+<header class="post-heading"><a class="link" href="/#journal-writing">전체 글</a><p class="overline">{{ category }}{% if draft %} · 작성안{% endif %}</p><h1>{{ title }}</h1><p class="post-description">{{ description }}</p><p class="post-meta">{% if draft %}미발행 초안{% else %}<time datetime="{{ page.date | isoDate }}">{{ page.date | dateLabel }}</time>{% endif %}{% if updated %} · 수정 {{ updated | dateLabel }}{% endif %}</p></header>
+{% if draft %}<aside class="notice">작성안 미리보기입니다. 공개 빌드에는 포함되지 않습니다.</aside>{% endif %}
+<div class="prose">{{ content | safe }}</div>
+{% if originalUrl %}<p class="original"><a href="{{ originalUrl }}">기존 블로그에서 원문 보기</a></p>{% endif %}
+<div class="post-bottom"><a href="/#journal-writing">전체 글로 돌아가기</a><a href="{{ site.portfolio }}">포트폴리오</a></div>
+</article>

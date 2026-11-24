@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<div class="wrap"><section class="hero"><p class="name">성찬홍의 개발 기록</p><h1>Build. Learn. Share.</h1><p class="lead">서비스를 만들며 마주한 문제와 선택,<br>AI Agent로 넓혀가는 개발 경험을 기록합니다.</p><div class="hero-links"><a class="pill" href="#journal-writing">기술 글 읽기</a><a class="link" href="https://portfolio.dev-hong.it.kr/resume" target="_blank" rel="noopener">이력서 보기</a></div></section>
+<section class="project-section" id="journal-projects"><div class="section-head"><div><p class="overline">프로젝트에서 시작한 이야기</p><h2>직접 만들고,<br><span>더 깊이 들여다봅니다.</span></h2></div><a class="link" href="https://portfolio.dev-hong.it.kr/work" target="_blank" rel="noopener">전체 프로젝트 보기</a></div><div class="projects">
+<article class="project"><div class="status">개발 중 · 개인 프로젝트</div><h3>KBO Mate — 야구 직관 안내 챗봇</h3><p>경기 일정과 구장·예매 정보를 안내하는 챗봇을 개발하고 있습니다. FastAPI와 LangGraph를 사용하며 배운 내용을 기록합니다.</p><div class="project-facts"><div class="fact"><strong>LangGraph</strong><small>대화 흐름과 Context 설계</small></div><div class="fact"><strong>FastAPI</strong><small>챗봇 백엔드 개발</small></div></div><a class="link" href="/posts/langgraph-context/">개발 기록 읽기</a></article>
+<article class="project"><div class="status">운영 중 · 실무 프로젝트</div><h3>대륜톡 — 실시간 상담 플랫폼</h3><p>여러 홈페이지의 상담 위젯과 ERP 상담 콘솔을 개발했습니다. 연결이 끊긴 뒤 상태를 복구하고 실시간 변경을 화면에 반영합니다.</p><div class="project-facts"><div class="fact"><strong>약 80개</strong><small>공통 상담 위젯 적용 홈페이지</small></div><div class="fact"><strong>12만 건+</strong><small>시작 후 1년간 실제 상담<br>포트폴리오 기재 · DB 집계 기준</small></div></div><a class="link" href="https://portfolio.dev-hong.it.kr/project/realtime-support" target="_blank" rel="noopener">프로젝트 자세히 보기</a></article>
+</div></section></div>
+<section class="writing" id="journal-writing"><div class="wrap"><div class="section-head"><div><p class="overline">기술 글</p><h2>고민의 과정도<br><span>함께 남깁니다.</span></h2></div></div><div class="filters" aria-label="기술 글 분류"><button type="button" data-filter="all" aria-pressed="true">전체</button><button type="button" data-filter="agent" aria-pressed="false">AI Agent</button><button type="button" data-filter="backend" aria-pressed="false">백엔드·데이터</button><button type="button" data-filter="ops" aria-pressed="false">인프라·운영</button></div><div aria-live="polite">
+{% for post in collections.articles %}
+<a class="article" data-topic="{{ post.data.topic }}" href="{{ post.url }}"><div class="meta">{{ post.data.category }}<small>{% if post.data.draft %}미발행 작성안{% else %}{{ post.date | dateLabel }}{% endif %}</small></div><div><h3>{{ post.data.title }}</h3><p>{{ post.data.description }}</p></div></a>
+{% endfor %}
+<p class="empty" id="empty-posts" hidden>이 분류의 글은 아직 이전 중입니다. 전체 글에서 다른 기록을 살펴보세요.</p>
+</div></div></section>
+<div class="wrap ending"><div><h2>코드와 경험을 더 살펴보세요.</h2><p>프로젝트의 전체 맥락은 포트폴리오에 정리했습니다.</p></div><div class="ending-links"><a class="link" href="https://github.com/DChanHong" target="_blank" rel="noopener">GitHub</a><a class="link" href="https://portfolio.dev-hong.it.kr/" target="_blank" rel="noopener">포트폴리오</a></div></div>

@@ -1,0 +1,17 @@
+{
+  "originalUrl": "https://velog.io/@hongchee/AI-Agent-LangGraph-%EB%8F%84%EC%9E%85-Tool%EB%B3%B4%EB%8B%A4-%EB%A8%BC%EC%A0%80-%EC%A0%95%EB%A6%AC%ED%95%B4%EC%95%BC-%ED%96%88%EB%8D%98-Context",
+  "originalPostId": "3584667c-811e-492e-99af-5b6f5a8ddd6a",
+  "originalPublishedAt": "2026-09-02T07:13:42.272Z",
+  "originalUpdatedAt": "2026-11-20T19:02:38.004Z",
+  "migratedAt": "2026-11-24",
+  "localPost": "src/posts/langgraph-context.md",
+  "originalBodySha256": "c4359a603753296292158559859fb66c018c1f99986c0a15d32e291e1220f719",
+  "images": [
+    {
+      "originalUrl": "https://velog.velcdn.com/images/hongchee/post/ccb3d71b-521c-4558-b5e7-5ab103f4369f/image.png",
+      "localPath": "/assets/images/langgraph-context/context-storage.png",
+      "sha256": "7effd8030a2dc1a3f1e63b70e4695c694b6b8bc4938ab1366efe254f983d30fa"
+    }
+  ],
+  "contentChanges": "Only image URL replaced. Body text, headings, code fences and other links preserved."
+}
